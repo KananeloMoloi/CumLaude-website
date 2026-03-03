@@ -223,10 +223,11 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color);
-  background-color: var(--background-color);
-  padding: 15px 0;
+  background-color: #f9f9f910;
+  padding: 8px 0;
   transition: all 0.5s;
   z-index: 997;
+  
 }
 
 .header .logo {
@@ -291,6 +292,7 @@ h6 {
 @media (min-width: 1200px) {
   .navmenu {
     padding: 0;
+    background-color: #059652;
   }
 
   .navmenu ul {

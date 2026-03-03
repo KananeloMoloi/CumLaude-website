@@ -3,7 +3,7 @@
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: 80vh;
+  height: 80vh;
   position: relative;
   padding: 80px 0;
   display: flex;
@@ -20,6 +20,7 @@
   height: 100%;
   object-fit: cover;
   z-index: 1;
+  overflow-y: 0px;
 }
 
 .hero:before {
@@ -420,6 +421,7 @@
   height: 100%;
   width: 100%;
   object-fit: fill;
+  background-color: aqua;
 }
 .logo-picture img{
   height: 5rem;
