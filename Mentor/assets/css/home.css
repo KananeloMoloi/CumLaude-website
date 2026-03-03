@@ -98,7 +98,6 @@
   margin-right: 4px;
   color: var(--accent-color);
 }
-
 .about .content p:last-child {
   margin-bottom: 0;
 }
@@ -426,4 +425,24 @@
 .logo-picture img{
   height: 5rem;
   width: 13rem;
+}
+/*ceo properyties*/
+.image-ceo {
+  height: 25rem;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.image-ceo img{
+  height: 100%;
+  width: 100%;
+  float: left;
+  margin-right: 10px;
+  margin-top: 120px;
+}
+.image-ceo p{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
