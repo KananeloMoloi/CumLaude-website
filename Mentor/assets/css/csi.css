@@ -476,3 +476,13 @@
     background: var(--accent-color);
   }
 }
+.logo-picture{
+  height: 100%;
+  width: 15%;
+  margin-right: 16rem;
+  object-fit: fill;
+}
+.logo-picture img{
+  height: 5rem;
+  width: 13rem;
+}
