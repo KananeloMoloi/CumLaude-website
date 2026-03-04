@@ -1,0 +1,518 @@
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.slider {
+  position: absolute;
+  inset: 0; 
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.slides {
+  display:flex;
+  flex-direction: row;
+  width: 100%; /* 3 images */
+  height: 100%;
+  animation: slide 12s infinite;
+
+}
+
+.slides img {
+  flex: 0 0 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Overlay effect */
+.hero:before {
+  content: "";
+  background: color-mix(in srgb, var(--background-color), transparent 60%);
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.hero .container {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  padding: 20px;
+  margin-top: 300px;
+}
+
+.hero h2 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.hero p {
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin: 10px 0 0 0;
+  font-size: 24px;
+}
+
+.hero .btn-get-started {
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-left: 500px;
+  border-radius: 50px;
+  transition: 0.4s;
+  margin-top: 30px;
+  border: 2px solid var(--default-color);
+  color: var(--default-color);
+}
+
+.hero .btn-get-started:hover {
+  background: var(--accent-color);
+  border: 2px solid var(--accent-color);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 32px;
+  }
+  .hero p {
+    font-size: 18px;
+  }
+}
+
+/* Slider animation */
+@keyframes slide {
+  0% { transform: translateX(0%); } 
+  20% { transform: translateX(0%); } 
+  25% { transform: translateX(-100%); } 
+  45% { transform: translateX(-100%); } 
+  50% { transform: translateX(-200%); } 
+  70% { transform: translateX(-200%); } 
+  75% { transform: translateX(-300%); } 
+  95% { transform: translateX(-300%); } 
+  100% { transform: translateX(0%); }
+}
+
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+.about .content h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.about .content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about .content ul li {
+  padding-bottom: 10px;
+}
+
+.about .content ul i {
+  font-size: 1.25rem;
+  margin-right: 4px;
+  color: var(--accent-color);
+}
+
+.about .content p:last-child {
+  margin-bottom: 0;
+}
+
+.about .content .read-more {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  font-family: var(--heading-font);
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 1px;
+  padding: 10px 24px 12px 24px;
+  border-radius: 50px;
+  transition: 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about .content .read-more i {
+  font-size: 18px;
+  margin-left: 5px;
+  line-height: 0;
+  transition: 0.3s;
+}
+
+.about .content .read-more:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  padding-right: 19px;
+}
+
+.about .content .read-more:hover i {
+  margin-left: 10px;
+}
+
+/*--------------------------------------------------------------*/
+
+.why-us {
+  padding: 60px 0;
+}
+
+/* Title */
+.why-us h1 {
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+  text-decoration-color: #ff6600;
+  text-decoration-thickness: 5px;
+  font-weight: 700;
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+/* LEFT IMAGE */
+.why-us .why-box {
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.why-us .why-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* RIGHT ICON BOXES ONLY */
+.why-us .icon-box {
+  background: #fff;
+  padding: 40px 25px;
+  border-radius: 12px;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+
+  border: 1px solid rgba(0,0,0,0.05);
+
+  transition: 
+    transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.35s ease;
+}
+
+/* Smooth hover */
+.why-us .icon-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* ICON */
+.why-us .icon-box i {
+  font-size: 32px;
+  margin-bottom: 25px;
+  color: #ff6600;
+  background: rgba(255,102,0,0.1);
+  width: 70px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+
+  transition: all 0.1s ease;
+}
+
+/* Icon hover */
+.why-us .icon-box:hover i {
+  background: #ff6600;
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.why-us .icon-box h4 {
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.why-us .icon-box p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .why-us .icon-box {
+    height: auto;
+  }
+}
+/*--------------------------------------------------------------
+/* Features Section */
+.features {
+  padding: 60px 0;
+}
+
+.features h1 {
+  display: flex;
+  justify-content: center;
+  text-decoration: underline;
+  text-decoration-color: #ff6600;
+  text-decoration-thickness: 5px;
+  font-weight: 700;
+  font-size: 50px;
+  margin-bottom: 50px;
+}
+
+/* Row gap for spacing */
+.sponsors-row {
+  gap: 10px; /* 10px spacing between cards */
+}
+
+/* Feature card */
+.features .features-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 10px;
+  aspect-ratio: 1/1;
+  width: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
+}
+
+/* Images inside the card */
+.features .features-item img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Hover effect */
+.features .features-item:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+/*--------------------------------------------------------------
+# Courses Section
+--------------------------------------------------------------*/
+.courses .course-item {
+  background-color: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-radius: 5px;
+}
+
+.courses .course-content {
+  padding: 15px;
+}
+
+.courses .course-content h3 {
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.courses .course-content h3 a {
+  color: var(--heading-color);
+  transition: 0.3s;
+}
+
+.courses .course-content h3 a:hover {
+  color: var(--accent-color);
+}
+
+.courses .course-content .category {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  font-size: 14px;
+  padding: 6px 14px;
+  margin: 0;
+  border-radius: 5px;
+}
+
+.courses .course-content .price {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+.courses .course-content .description {
+  font-size: 14px;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+.courses .trainer {
+  padding-top: 15px;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.courses .trainer .trainer-profile img {
+  max-width: 50px;
+  border-radius: 50px;
+}
+
+.courses .trainer .trainer-profile .trainer-link {
+  padding-left: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  transition: 0.3s;
+}
+
+.courses .trainer .trainer-profile .trainer-link:hover {
+  color: var(--accent-color);
+}
+
+.courses .trainer .trainer-rank {
+  font-size: 18px;
+  color: color-mix(in srgb, var(--default-color), transparent 60%);
+}
+
+.courses .trainer .trainer-rank .user-icon {
+  font-size: 22px;
+}
+
+/*--------------------------------------------------------------
+# Trainers Index Section
+--------------------------------------------------------------*/
+.trainers-index .member {
+  background-color: var(--surface-color);
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.trainers-index .member img {
+  margin: -1px -1px 30px -1px;
+}
+
+.trainers-index .member .member-content {
+  padding: 0 20px 30px 20px;
+}
+
+.trainers-index .member h4 {
+  font-weight: 700;
+  margin-bottom: 2px;
+  font-size: 18px;
+}
+
+.trainers-index .member span {
+  font-style: italic;
+  display: block;
+  font-size: 13px;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+}
+
+.trainers-index .member p {
+  padding-top: 10px;
+  font-size: 14px;
+  font-style: italic;
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+}
+
+.trainers-index .member .social {
+  margin-top: 15px;
+}
+
+.trainers-index .member .social a {
+  color: color-mix(in srgb, var(--default-color), transparent 60%);
+  transition: 0.3s;
+}
+
+.trainers-index .member .social a:hover {
+  color: var(--accent-color);
+}
+
+.trainers-index .member .social i {
+  font-size: 18px;
+  margin: 0 2px;
+}
+.logo-picture{
+  height: 100%;
+  width: 15%;
+  margin-right: 16rem;
+  object-fit: fill;
+}
+.logo-picture img{
+  height: 5rem;
+  width: 13rem;
+}
+
+/*slider*/
+
+
+.slider {
+ position: absolute;
+  inset: 0;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  object-fit: fit;
+  z-index: 1;
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  animation: slide 10s infinite;
+}
+
+.slide {
+  width: 100%;
+  position: relative;
+  flex-shrink: 0;
+  z-index: 3;
+}
+
+.slide img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.content {
+  position: absolute;
+  transform: translateY(-50%);
+  color: #fff;
+  max-width: 500px;
+}
+
+.content h2 {
+   margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.content p {
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin: 10px 0 0 0;
+  font-size: 24px;
+}
+
+.btn-get-started {
+  padding: 12px 25px;
+  background: #ff6600;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* Sliding animation */
+@keyframes slide {
+  0% { transform: translateX(0); }
+  33% { transform: translateX(0); }
+
+  38% { transform: translateX(-100%); }
+  66% { transform: translateX(-100%); }
+
+  71% { transform: translateX(-200%); }
+  100% { transform: translateX(-200%); }
+}
