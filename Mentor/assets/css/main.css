@@ -523,11 +523,11 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Global Footer
---------------------------------------------------------------*/
+/* Global Footer */
 .footer {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  color: white;
+  font-weight: 500;
+  background-color: #111; /* dark background */
   font-size: 14px;
   padding-bottom: 50px;
   position: relative;
@@ -537,28 +537,22 @@ h6 {
   padding-top: 50px;
 }
 
-.footer .footer-about .logo {
-  margin-bottom: 0;
-}
-
-.footer .footer-about .logo img {
-  max-height: 40px;
-  margin-right: 6px;
-}
-
+/* Logo */
 .footer .footer-about .logo span {
   font-size: 26px;
   font-weight: 700;
   letter-spacing: 1px;
   font-family: var(--heading-font);
-  color: var(--heading-color);
+  color: white;
 }
 
 .footer .footer-about p {
   font-size: 14px;
   font-family: var(--heading-font);
+  color: white;
 }
 
+/* Social Links */
 .footer .social-links a {
   display: flex;
   align-items: center;
@@ -566,39 +560,32 @@ h6 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: white;
   margin-right: 10px;
   transition: 0.3s;
 }
 
 .footer .social-links a:hover {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
+  color: #ff6600; /* accent color */
+  border-color: #ff6600;
 }
 
+/* Headings */
 .footer h4 {
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
   position: relative;
   padding-bottom: 12px;
+  color: white;
 }
 
-.footer .footer-links {
-  margin-bottom: 30px;
-}
-
+/* Links */
 .footer .footer-links ul {
   list-style: none;
   padding: 0;
   margin: 0;
-}
-
-.footer .footer-links ul i {
-  padding-right: 2px;
-  font-size: 12px;
-  line-height: 0;
 }
 
 .footer .footer-links ul li {
@@ -607,46 +594,41 @@ h6 {
   align-items: center;
 }
 
-.footer .footer-links ul li:first-child {
-  padding-top: 0;
-}
-
 .footer .footer-links ul a {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: white;
   display: inline-block;
-  line-height: 1;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
 .footer .footer-links ul a:hover {
-  color: var(--accent-color);
+  color: #FFD400;
+  font-weight: 650;
+  font-size: 18px;
 }
 
-.footer .footer-contact p {
-  margin-bottom: 5px;
-}
-
+/* Contact & Newsletter */
 .footer .footer-newsletter .newsletter-form {
   margin-top: 30px;
   margin-bottom: 15px;
   padding: 6px 8px;
-  position: relative;
   border-radius: 50px;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   display: flex;
-  background-color: var(--surface-color);
+  background-color: #222;
   transition: 0.3s;
 }
 
 .footer .footer-newsletter .newsletter-form:focus-within {
-  border-color: var(--accent-color);
+  border-color: #ff6600;
 }
 
 .footer .footer-newsletter .newsletter-form input[type=email] {
   border: 0;
   padding: 4px 8px;
   width: 100%;
-  background-color: var(--surface-color);
-  color: var(--default-color);
+  background-color: #222;
+  color: white;
 }
 
 .footer .footer-newsletter .newsletter-form input[type=email]:focus-visible {
@@ -658,20 +640,22 @@ h6 {
   font-size: 16px;
   padding: 0 20px 2px 20px;
   margin: -7px -8px -7px 0;
-  background: var(--accent-color);
-  color: var(--contrast-color);
+  background: #ff6600;
+  color: white;
   transition: 0.3s;
   border-radius: 50px;
 }
 
 .footer .footer-newsletter .newsletter-form input[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background: rgba(255, 102, 0, 0.8);
 }
 
+/* Copyright */
 .footer .copyright {
   padding-top: 25px;
   padding-bottom: 25px;
-  background-color: color-mix(in srgb, var(--default-color), transparent 95%);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
 }
 
 .footer .copyright p {
@@ -681,6 +665,7 @@ h6 {
 .footer .credits {
   margin-top: 6px;
   font-size: 13px;
+  color: white;
 }
 
 /*--------------------------------------------------------------
