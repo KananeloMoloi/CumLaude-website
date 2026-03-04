@@ -192,12 +192,40 @@
   color: var(--contrast-color);
   background: var(--accent-color);
 }
+
+
+/*--------------------------------------------------------------
+# Features Section
+--------------------------------------------------------------*/
+.features {
+  padding: 20px 0;
+}
+
+.sponsors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 13px; /* 🔥 EXACT spacing between boxes */
+  max-width: 1200px;
+  margin: auto;
+}
+
+.features-item {
+  height: 150px;
+  background: white;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  transition: 0.3s ease;
+}
 .why-us .icon-box:hover {
   width: 110%;
   height: 110%;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
   z-index: -1;
   box-shadow: 1px 1px 25px;
+
 }
 /*--------------------------------------------------------------
 /* Features Section */
@@ -214,8 +242,20 @@
   font-weight: 700;
   font-size: 50px;
   margin-bottom: 50px;
+  margin-top: 0;
 }
 
+.features-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Smooth hover effect */
+.features-item:hover {
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  transform: scale(1.05);
+}
 /* Row gap for spacing */
 .sponsors-row {
   gap: 10px; /* 10px spacing between cards */
@@ -233,6 +273,7 @@
   width: 70%;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 0 0 rgba(0,0,0,0);
+
 }
 
 /* Images inside the card */
