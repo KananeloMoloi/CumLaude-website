@@ -213,7 +213,7 @@
 .why-us .icon-box {
   background-color: var(--surface-color);
   text-align: center;
-  padding: 40px 30px;
+  padding: 50px 40px;
   width: 100%;
   height: 100%;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
@@ -248,7 +248,13 @@
   color: var(--contrast-color);
   background: var(--accent-color);
 }
-
+.why-us .icon-box:hover {
+  width: 110%;
+  height: 110%;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  z-index: -1;
+  box-shadow: 1px 1px 25px;
+}
 /*--------------------------------------------------------------
 # Features Section
 --------------------------------------------------------------*/
