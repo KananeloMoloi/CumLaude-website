@@ -87,3 +87,10 @@
   height: 5rem;
   width: 13rem;
 }
+
+.contact-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;}

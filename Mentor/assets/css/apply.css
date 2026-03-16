@@ -1,0 +1,72 @@
+.logo-picture{
+  height: 100%;
+  width: 15%;
+  margin-right: 16rem;
+  object-fit: fill;
+}
+.logo-picture img{
+  height: 5rem;
+  width: 13rem;
+}
+.job-over{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.job-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+.job-item{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+.job-item h3{
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+}
+.job-item p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 0   auto;
+}
+.job-item span{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    margin: 0   auto;
+    font-size: 20px;
+}
+.job-item .btn-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   font-size: 25px;
+}
+
+.no-job{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    flex-direction: column;
+}
+.no-job a:hover{
+    background-color: var(--accent-color);
+    color: var(--background-color);
+    transition: 0.3s;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
