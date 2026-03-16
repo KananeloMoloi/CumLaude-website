@@ -20,6 +20,7 @@
   background: linear-gradient(to top, #9c7f1ed9 , #000000);
   padding: 80px 0;
   color: white;
+  border-radius: 0 0 0px 90px;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
@@ -253,6 +254,7 @@ h6{
 .header .logo img {
   max-height: 36px;
   margin-right: 8px;
+  
 }
 
 .header .logo h1 {
