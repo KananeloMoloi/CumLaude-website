@@ -8,6 +8,27 @@
   height: 5rem;
   width: 13rem;
 }
+
+.collapsible-content {
+  display: none; /* hidden by default */
+  margin-top: 10px;
+}
+
+.collapsible-title {
+  cursor: pointer;
+  background: #ffffff;
+  color: #daba09;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.collapsible-title.active {
+  background: #db3f3f; /* highlight when open */
+  color: yellow;
+}
+
+
 .decription{
   display: flex;
   flex-direction: column;
