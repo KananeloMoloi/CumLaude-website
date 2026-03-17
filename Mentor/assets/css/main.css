@@ -22,6 +22,7 @@
   color: white;
   border-radius: 0 0 0px 90px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  margin-bottom: 50px;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
