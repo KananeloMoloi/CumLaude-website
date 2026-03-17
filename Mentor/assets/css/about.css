@@ -105,8 +105,10 @@
   margin: 15px auto 15px auto;
 }
 
+/*mission and v div*/
 .testimonials .swiper-wrapper {
   height: auto;
+  margin-top: -15px;
 }
 
 .testimonials .swiper-pagination {
@@ -229,3 +231,4 @@
     margin: 0 auto;
   }
 }
+
