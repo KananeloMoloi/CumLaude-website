@@ -10,32 +10,46 @@
 }
 
 .collapsible-content {
-  display: none; /* hidden by default */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.8s ease-in-out, opacity 0.8s ease-in-out;
+  opacity: 0;
   margin-top: 10px;
+  margin-bottom: 25px;
+}
+.collapsible-content p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.collapsible-content.open {
+  max-height: 1000px; /* large enough to fit content */
+  opacity: 1;
+  overflow: hidden;
+  object-position: center;
+  margin:0 auto;
+  object-fit: cover;
 }
 
 .collapsible-title {
   cursor: pointer;
   padding: 10px;
   border-radius: 5px;
-  z-index: 1;
-   display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: #daba09;
+  transition: background 0.8s ease-in-out, box-shadow 0.8s ease-in-out;
 }
 
 .collapsible-title.active {
-  background: #b6b5b5; /* highlight when open */
+  background: #b6b5b5;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   width: fit-content;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin: 0 auto;
+  color: #000;
 }
 
 
@@ -55,6 +69,8 @@
 .decription p{
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 /* gallery slider */
 /* From Uiverse.io by ashwin_5681 */ 
@@ -66,10 +82,11 @@
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   color: white;
   text-align: center;
+  margin-bottom: 25px;
 }
 .card img {
-  width:80%;
-  height: 80%;
+  width:100%;
+  height: 100%;
   object-fit: cover;
  border-radius: 8px;
  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
@@ -77,35 +94,68 @@
 .card p {
   font-size: 14px;
   color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
 }
 
 .slider {
   width: 100%;
   height: var(--height);
-  overflow: hidden;
+  position: relative;
+  overflow: visible; /* allow items to spill out */
   mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
+  margin-bottom: 25px;
 }
+
 .slider .list {
   display: flex;
   width: 100%;
   min-width: calc(var(--width) * var(--quantity));
   position: relative;
 }
+/* Base item */
 .slider .list .item {
   width: var(--width);
   height: var(--height);
   position: absolute;
   left: 100%;
   animation: autoRun 20s linear infinite;
-  transition: filter 0.5s;
+  transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
   animation-delay: calc(
     (20s / var(--quantity)) * (var(--position) - 1) - 20s
   ) !important;
 }
+
+/* Hover effect on the whole item */
+.slider .list .item:hover {
+  transform: scale(1.5) translateY(-10px); /* enlarge + lift */
+  z-index: 50;                             /* bring above others */
+  filter: grayscale(0);                     /* restore color */
+  box-shadow: 0 12px 25px rgba(0,0,0,0.4);  /* depth shadow */
+  border-radius: 12px;
+  object-fit: fill;
+  object-position: center;
+}
+/* Optional: pause animation when hovering */
+.slider:hover .item {
+  animation-play-state: paused !important;
+  filter: grayscale(1);
+}
+
+/* Blur and shrink non-hovered items when slider is hovered */
+.slider:hover > .list > .item:not(:hover) {
+  filter: blur(3px) grayscale(1);
+  transform: scale(0.9);
+  z-index: 1;
+}
+
 .slider .list .item img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+
 }
 @keyframes autoRun {
   from {

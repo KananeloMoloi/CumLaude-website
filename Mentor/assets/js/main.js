@@ -141,12 +141,20 @@
 
 document.querySelectorAll('.collapsible-title').forEach(title => {
   title.addEventListener('click', () => {
-    title.classList.toggle('active');
+    const parent = title.closest('.collapsible'); // current collapsible block
     const content = title.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
+
+    // Close siblings at the same level
+    parent.parentElement.querySelectorAll(':scope > .collapsible .collapsible-title').forEach(siblingTitle => {
+      if (siblingTitle !== title) {
+        siblingTitle.classList.remove('active');
+        siblingTitle.nextElementSibling.classList.remove('open');
+      }
+    });
+
+    // Toggle current
+    title.classList.toggle('active');
+    content.classList.toggle('open');
   });
 });
+
