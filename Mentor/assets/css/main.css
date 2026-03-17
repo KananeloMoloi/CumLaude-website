@@ -115,6 +115,32 @@ h6{
   font-family: var(--heading-font)
 
 }
+.footer .col-lg-4 .list-footer p{
+  color: rgb(185, 179, 179);
+
+}
+/* Twitter (X) */
+.footer .social-links .bi-twitter-x:hover{
+  color: #000000;
+}
+
+/* Facebook */
+.footer .social-links .bi-facebook:hover {
+  color: #1877F2;
+}
+
+/* Instagram */
+.footer .social-links .bi-instagram:hover {
+  color: #E4405F;
+}
+
+/* LinkedIn */
+.footer .social-links .bi-linkedin:hover {
+  color: #0A66C2;
+}
+.footer .col-lg-4 p{
+  color: rgb(185, 179, 179);
+}
 .footer-h1{
   background: linear-gradient(to bottom, #f8f5f5, #896f1cd9);
   -webkit-background-clip: text;
@@ -592,6 +618,13 @@ h6{
   font-family: var(--heading-font);
   color: white;
 }
+.footer .social-links {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15%;
+}
 
 /* Social Links */
 .footer .social-links a {
@@ -601,17 +634,17 @@ h6{
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 2px solid rgba(0, 0, 0, 0.589);
+  border-bottom: 2px solid rgb(112, 109, 109); /* underline */
   font-size: 16px;
-  color: rgb(0, 0, 0);
+  color: rgb(112, 109, 109);
   margin-right: 10px;
-  transition: 0.3s;
+
+  transition: transform 0.35s ease, color 0.35s ease, border-color 0.35s ease;
 }
 
 .footer .social-links a:hover {
-  color:#e3b11bf8; /* accent color */
-  border-color: #e3b11bba;
-  width: 25px;
+  transform: scale(1.35);
+  border: 2px solid rgb(112, 109, 109);
 }
 
 /* Headings */
@@ -700,7 +733,7 @@ h6{
   font-size: 16px;
   padding: 0 15px;
   margin-left: 5px;
-  background: #e3b11bba;
+  background: rgb(112, 109, 109);
   color: #000;
   border-radius: 50px;
   transition: 0.3s;
@@ -709,8 +742,8 @@ h6{
 
 /* Hover effect */
 .footer .footer-newsletter .newsletter-form input[type=submit]:hover {
-  background: rgba(0, 0, 0, 0.863);
-  color: #e3b11bba;
+  background: #e3b11bba;
+  color: whitesmoke;
   border: 1px solid #e3b11bba;
 }
 
