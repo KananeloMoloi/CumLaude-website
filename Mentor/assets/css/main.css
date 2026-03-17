@@ -22,6 +22,7 @@
   color: white;
   border-radius: 0 0 0px 90px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  margin-bottom: 50px;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
@@ -650,22 +651,22 @@ h6{
 
 /* Collapsible Newsletter Input */
 .footer .footer-newsletter .newsletter-form {
-  margin-top: 30px;
-  margin-bottom: 15px;
+  margin: 30px auto 15px auto; /* center horizontally */
   padding: 6px 8px;
   border-radius: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   display: flex;
   background-color: #222;
-  transition: all 0.4s ease;
+  transition: width 0.4s ease, border-color 0.4s ease; /* smooth transition */
 
   width: 180px; /* collapsed size */
+  max-width: 100%; /* prevents overflow */
   overflow: hidden;
 }
 
 /* Expand on focus */
 .footer .footer-newsletter .newsletter-form:focus-within {
-  width: 100%;
+  width: 90%; /* expands fully */
   border-color: #d65616;
 }
 
@@ -683,13 +684,12 @@ h6{
   outline: none;
 }
 
-/* Hide placeholder when collapsed */
+/* Placeholder */
 .footer .footer-newsletter .newsletter-form input::placeholder {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
-/* Show placeholder when expanded */
 .footer .footer-newsletter .newsletter-form:focus-within input::placeholder {
   opacity: 1;
 }
