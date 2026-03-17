@@ -11,7 +11,7 @@
 }
 
 .contact .info-item i {
-  color: var(--contrast-color);
+  color: goldenrod;
   background: var(--accent-color);
   font-size: 20px;
   width: 48px;
@@ -21,7 +21,8 @@
   align-items: center;
   border-radius: 50px;
   transition: all 0.3s ease-in-out;
-  margin-right: 15px;
+  margin-left: 15px; /* changed from margin-right to margin-left */
+  margin-right: 0;
 }
 
 .contact .info-item h3 {
@@ -47,7 +48,7 @@
   font-size: 14px;
   padding: 10px 15px;
   box-shadow: none;
-  border-radius: 0;
+  border-radius: 10px;
   color: var(--default-color);
   background-color: color-mix(in srgb, var(--background-color), transparent 50%);
   border-color: color-mix(in srgb, var(--default-color), transparent 80%);
@@ -62,11 +63,12 @@
 .contact .php-email-form input[type=text]::placeholder,
 .contact .php-email-form input[type=email]::placeholder,
 .contact .php-email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
+  color: white;
+
 }
 
 .contact .php-email-form button[type=submit] {
-  color: var(--contrast-color);
+  color: goldenrod;
   background: var(--accent-color);
   border: 0;
   padding: 10px 30px 12px 30px;
@@ -94,3 +96,19 @@
   align-items: center;
   gap: 2rem;
   margin-top: 2rem;}
+
+  .php-email-form .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.php-email-form .form-control:focus {
+  background-color: rgba(109, 106, 106, 0.219);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: none;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+  }

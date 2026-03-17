@@ -36,8 +36,9 @@
   z-index: 3;                /* above image + overlay */
   text-align: center;
   padding: 20px;
-  top: 50%;                  /* vertically center */
+  top: 250px;                  /* vertically center */
   transform: translateY(-50%);
+  margin-top: 200px;
 }
 
 .hero h2 {
@@ -48,7 +49,7 @@
 
 .hero p {
   color: color-mix(in srgb, var(--default-color), transparent 20%);
-  margin: 10px 0 0 0;
+margin: 0 auto;
   font-size: 24px;
 }
 
@@ -62,12 +63,12 @@
   border-radius: 50px;
   transition: 0.4s;
   margin: 0 auto;
-  border: 2px solid var(--default-color);
-  color: var(--default-color);
+  margin-top: 200px;
+  
 }
 
 .hero .btn-get-started:hover {
-  background: var(--accent-color);
+  background: var(--nav-hover-colo);
   border: 2px solid var(--accent-color);
 }
 
@@ -90,7 +91,7 @@
   display: flex;
   justify-content: center;
   text-decoration: underline;
-  text-decoration-color: #ff6600;
+  text-decoration-color: #e3b11bba;
   text-decoration-thickness: 5px;
   font-weight: 700;
   font-size: 50px;
@@ -124,7 +125,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-
+align-content: center;
   border: 1px solid rgba(0,0,0,0.05);
 
   transition: 
@@ -142,21 +143,21 @@
 .why-us .icon-box i {
   font-size: 32px;
   margin-bottom: 25px;
-  color: #ff6600;
+  color: #e3b11bba;
   background: rgba(255,102,0,0.1);
   width: 70px;
   height: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
+  align-content: center;
   border-radius: 50%;
-
-  transition: all 0.3s ease;
+  transition: all 0.3s ease;;
 }
 
 /* Icon hover */
 .why-us .icon-box:hover i {
-  background: #ff6600;
+  background: black;
   color: #fff;
   transform: scale(1.1);
 }
@@ -190,7 +191,7 @@
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 13px; /* 🔥 EXACT spacing between boxes */
   max-width: 1200px;
-  margin: auto;
+  margin-bottom: 30px;
 }
 
 .features-item {
@@ -214,7 +215,7 @@
   display: flex;
   justify-content: center;
   text-decoration: underline;
-  text-decoration-color: #ff6600;
+  text-decoration-color: #e3b11bba;
   text-decoration-thickness: 5px;
   font-weight: 700;
   font-size: 50px;
@@ -436,8 +437,8 @@
 }
 
 .btn-get-started {
-  padding: 12px 25px;
-  background: #ff6600;
+  padding: 10px 25px;
+  background:#e3b11bba ;
   color: white;
   text-decoration: none;
   border-radius: 5px;

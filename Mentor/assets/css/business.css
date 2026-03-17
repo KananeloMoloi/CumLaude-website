@@ -1,0 +1,280 @@
+.logo-picture{
+  height: 100%;
+  width: 15%;
+  margin-right: 16rem;
+  object-fit: fill;
+}
+.logo-picture img{
+  height: 5rem;
+  width: 13rem;
+}
+/*Business Development*/
+.business-content{
+
+}
+.business-registration{
+    background: rgb(128,128,128);
+    background: linear-gradient(180deg, rgba(128,128,128,1) 0%, rgba(236,236,236,1) 0%, rgba(255,255,255,1) 100%);
+}
+.business-headers{
+
+    padding: 22px;
+    color: rgb(10, 78, 146);
+    font-size: 48px;
+    font-weight: 700; 
+    margin-left: 4%;
+    text-transform: uppercase;
+    
+}
+.business-dev-prerequisites{
+    font-size: 16px;
+    font-weight: 600;
+    color: #36454f;
+    line-height: 28px;
+    margin-left: 4%;
+    margin-right: 7%;
+    padding: 12px;
+}  
+.fixed-background{
+    height: 300px;
+    background-image: url('../images/Services/businessoutdoor4.jpg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    transition: 0s linear;
+    transition-property: background-position;
+    text-align: center;
+    justify-content: center;
+    border-radius: 0.5%;
+    margin-right: 10px;
+    margin-left: 10px;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    margin-bottom: 20px;
+
+}
+
+
+.running-projects{
+ 
+}
+.MQA-content h2{
+    margin-left: 4%;
+    color: #29323c;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/*End of Business development*/
+/*Learnership page*/
+.jumbotron{
+    width: 100%;
+    max-width: 100%;
+    height: 310px;
+    background: rgb(12,14,54);
+    background: linear-gradient(72deg, rgba(12,14,54,1) 0%, rgba(8,157,223,1) 100%);
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+.l-text{
+    padding-left: 10%;
+    padding-top: 3%;
+
+    max-width: 100%;
+    flex-wrap: wrap;  
+}
+.l-text h2{
+    color: aliceblue;
+    font-size: 70px;
+    font-family: 'poppins';
+    width: 80%;
+    line-height: 85px;
+}
+.l-text p{
+    width: 60%;
+    color: aliceblue;
+    font-size: 20px;
+    font-family: 'poppins';
+    margin-top: 8px;
+    z-index: 50;
+}
+.jumbo-logo img{
+    width: 300px;
+    height: 200px;
+    float: right;
+    margin-top: 3%;
+    margin-right: 250px;
+    z-index: 1000;
+}
+#lns{
+    background: rgb(245,245,245);
+    background: linear-gradient(180deg, rgba(245,245,245,1) 0%, rgba(255,255,255,1) 100%);
+    font-family: 'poppins';
+}
+
+.secondheader{
+    background: rgb(128,128,128);
+    background: linear-gradient(180deg, rgba(128,128,128,1) 0%, rgba(236,236,236,1) 0%, rgba(255,255,255,1) 100%);
+}
+.secondheader h3{
+    text-align: center;
+    padding: 35px;
+    /*color: rgb(10, 78, 146);*/
+    color:#36454f;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 30px;
+}
+.hostemployment p span{
+    font-size: 50px;
+    font-weight: 600;
+}
+.secondheader h3 span{
+    font-size: 50px;
+    font-weight: 600;
+}
+
+.l-images{
+    width: 100%;
+    max-width: 100%;
+    justify-content: space-around;
+    display: flex;
+    overflow: hidden;
+
+}
+.l-images img{
+    height: 350px;
+    max-width: 100%;
+    /*width: 750px;*/
+    width: 31%;
+    object-fit: cover;
+    background-position: center;
+    background-size: cover;
+    transition: 0.9s;
+    border-radius: 4px;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+    margin-bottom: 30px;
+    pointer-events: none;
+}
+.l-images img:hover{
+    transform: scale(1.125);
+}
+
+.programmes-header h1{
+    text-align: center;
+    font-weight: 700;
+    padding: 25px;
+    color: rgb(10, 78, 146);
+    font-size: 48px;
+}
+
+.programmes-list {
+    display: flex;
+    margin: auto;
+    max-width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.programmes{
+    width: auto;
+    background: rgb(128,128,128);
+    background: linear-gradient(180deg, rgba(128,128,128,1) 0%, rgba(236,236,236,1) 0%, rgba(255,255,255,1) 100%);
+    
+}
+.programmes-list ul{
+    display: block;
+    border-left: 4px solid rgb(150, 20, 20); 
+    height: fit-content;
+    position: relative;
+    margin-left: 25px;
+    flex-wrap: wrap;
+}
+.programmes-list ul{
+    padding: 20px 50px;
+    margin: 0 70px;
+    list-style-type: none;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    
+}
+.programmes-list ul li{
+    line-height: 45px;
+    color: grey;
+    font-size: 20px;
+}
+.programmes p{
+    text-align: center;
+    color: #949494;
+    padding: 20px;
+    text-wrap: wrap;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+.hostemployment{
+    margin-bottom: 20px;
+}
+.hostemployment-header h1{
+    text-align: center;
+    margin-top: 28px;
+    padding: 25px;
+    color: rgb(10, 78, 146);
+    font-size: 52px;
+    font-weight: 700;
+    position: relative;
+}
+.hostemployment p span{
+    font-size: 38px;
+}
+.hosts{
+    margin-bottom: 35px;
+}
+.hosts-images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hosts-images img{
+    width: 12%;
+    height: 100px;
+    aspect-ratio: 3/2;
+    object-fit: contain;
+    pointer-events: none;
+}
+.hostemployment p{
+    text-align: center;
+    padding: 24px;
+    color: /*#36454f*/#36454f;
+    line-height: 40px;
+    margin-bottom: 15px;
+    font-size: 22px;
+    font-weight: 500;
+}
+.applications{
+    margin-top: 10px;
+    background: rgb(128,128,128);
+    background: linear-gradient(180deg, rgba(128,128,128,1) 0%, rgba(236,236,236,1) 0%, rgba(255,255,255,1) 100%);
+
+}
+.applications-content{
+    background-image: url("../Images/book-watermark.jpg");
+    background-repeat: repeat-x;
+    background-position: left;
+}
+.applications-content p{
+    margin-left: 8%;
+    color: #36454f;
+    padding: 6px;
+    text-wrap: wrap;
+    font-weight: 400;
+    font-size: 1.6rem;
+    background-image: url("../Images/book-watermark.jpg");
+}
+.applications-header{
+    text-align: center;
+    font-weight: 700;
+    padding: 25px;
+    color: rgb(10, 78, 146);
+    font-size: 48px;
+}
+/*End of Learnership*/
