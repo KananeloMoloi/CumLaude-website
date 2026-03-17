@@ -21,11 +21,12 @@
   padding: 80px 0;
   color: white;
   border-radius: 0 0 0px 90px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
- --background-color: #f1f1f1;
+ /*--background-color: #b3b2b0;*/
   --default-color: #444444;
   --heading-color: #37423b;
 
@@ -70,8 +71,25 @@
 --------------------------------------------------------------*/
 body {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: whitesmoke;
   font-family: var(--default-font);
+  position: relative;
+}
+
+/* Decorative background image */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("/Mentor/images/body-bg2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 850px 849px;
+
+  opacity: .6;        /* transparency */
+  filter: blur(0px);    /* soft blur */
+  pointer-events: none; /* allows clicks through it */
+  z-index: -1;
 }
 
 a {
@@ -102,6 +120,7 @@ h6{
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-family: var(--heading-font);
+  
 }
 
 /* PHP Email Form Messages
@@ -544,12 +563,12 @@ h6{
 /* Global Footer */
 .footer {
  color: white;
-    font-weight: 500;
-    /* background-color: #000; */
-    background: linear-gradient(to bottom, #000000, #4d3e0ed9);
-    font-size: 14px;
-    padding-bottom: 50px;
-    position: relative;
+ font-weight: 500;
+ /* background-color: #000; */
+  background: linear-gradient(to bottom, #000000, #4d3e0ed9);
+  font-size: 14px;
+  padding-bottom: 50px;
+  position: relative; 
 
 }
 
@@ -629,7 +648,7 @@ h6{
   font-size: 18px;
 }
 
-/* Contact & Newsletter */
+/* Collapsible Newsletter Input */
 .footer .footer-newsletter .newsletter-form {
   margin-top: 30px;
   margin-bottom: 15px;
@@ -638,13 +657,19 @@ h6{
   border: 1px solid rgba(255, 255, 255, 0.3);
   display: flex;
   background-color: #222;
-  transition: 0.3s;
+  transition: all 0.4s ease;
+
+  width: 180px; /* collapsed size */
+  overflow: hidden;
 }
 
+/* Expand on focus */
 .footer .footer-newsletter .newsletter-form:focus-within {
+  width: 100%;
   border-color: #d65616;
 }
 
+/* Email input */
 .footer .footer-newsletter .newsletter-form input[type=email] {
   border: 0;
   padding: 4px 8px;
@@ -653,22 +678,36 @@ h6{
   color: white;
 }
 
+/* Remove outline */
 .footer .footer-newsletter .newsletter-form input[type=email]:focus-visible {
   outline: none;
 }
 
-.footer .footer-newsletter .newsletter-form input[type=submit] {
-    border: 0;
-    font-size: 20px;
-    padding: 0 20px 2px 20px;
-    margin: -7px -8px -7px 0;
-    background: #e3b11bba;
-    color: #000000;
-    transition: 0.3s;
-    border-radius: 50px;
+/* Hide placeholder when collapsed */
+.footer .footer-newsletter .newsletter-form input::placeholder {
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
+/* Show placeholder when expanded */
+.footer .footer-newsletter .newsletter-form:focus-within input::placeholder {
+  opacity: 1;
+}
 
+/* Submit button */
+.footer .footer-newsletter .newsletter-form input[type=submit] {
+  border: 0;
+  font-size: 16px;
+  padding: 0 15px;
+  margin-left: 5px;
+  background: #e3b11bba;
+  color: #000;
+  border-radius: 50px;
+  transition: 0.3s;
+  white-space: nowrap;
+}
+
+/* Hover effect */
 .footer .footer-newsletter .newsletter-form input[type=submit]:hover {
   background: rgba(0, 0, 0, 0.863);
   color: #e3b11bba;
@@ -734,6 +773,10 @@ h6{
         width: 33.33333333%;
         border-right: 3px solid #ffc3002e;
     }
+
+    .col-lg4:last-child{
+      border-right: none;
+    }
   }
   @media (min-width: 768px) {
     .col-lg-4 {
@@ -742,8 +785,11 @@ h6{
         width: 33.33333333%;
         border-right: 3px solid #ffc3002e;
     }
+      .col-lg-4:last-child{
+      border-right: none;
+    }
+  
   }
-
 /*--------------------------------------------------------------
 # Scroll Top Button
 --------------------------------------------------------------*/
