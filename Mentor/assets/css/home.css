@@ -79,6 +79,7 @@ margin: 0 auto;
 @media (max-width: 768px) {
   .hero h2 { font-size: 32px; }
   .hero p { font-size: 18px; }
+  
 }
 
 /*--------------------------------------------------------------
@@ -181,6 +182,7 @@ align-content: center;
     height: auto;
   }
 }
+
 
 /*--------------------------------------------------------------
 # Features Section
@@ -364,7 +366,7 @@ align-content: center;
 }
 
 .trainers-index .member .member-content {
-  padding: 0 20px 30px 20px;
+  padding: 0 20px 5px 20px;
 }
 
 .trainers-index .member h4 {
@@ -378,6 +380,7 @@ align-content: center;
   display: block;
   font-size: 13px;
   color: color-mix(in srgb, var(--default-color), transparent 20%);
+  padding-bottom: 0px;
 }
 
 .trainers-index .member p {
