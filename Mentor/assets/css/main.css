@@ -940,8 +940,14 @@ section,
 # Global Section Titles
 --------------------------------------------------------------*/
 .section-title {
-  padding-bottom: 60px;
+  padding-bottom: 30px;
+  padding-top: 50px;
   position: relative;
+}
+
+.section-title h3{
+    font-size: 2rem;
+  font-weight: 700;
 }
 
 .section-title h2 {
