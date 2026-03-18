@@ -9,9 +9,7 @@
   width: 13rem;
 }
 /*Business Development*/
-.business-content{
 
-}
 .business-registration{
     background: rgb(128,128,128);
     background: linear-gradient(180deg, rgba(128,128,128,1) 0%, rgba(236,236,236,1) 0%, rgba(255,255,255,1) 100%);
@@ -71,7 +69,7 @@
     max-width: 100%;
     height: 310px;
     background: rgb(12,14,54);
-    background: linear-gradient(72deg, rgba(12,14,54,1) 0%, rgba(8,157,223,1) 100%);
+    background: linear-gradient(to top, #9c7f1ed9 , #000000);
     align-items: center;
     flex-wrap: wrap;
     
