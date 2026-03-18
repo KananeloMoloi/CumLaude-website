@@ -3,6 +3,7 @@
 --------------------------------------------------------------*/
 .trainers .member {
   position: relative;
+  
 }
 
 .trainers .member .member-img {
@@ -36,16 +37,22 @@
   visibility: hidden;
   opacity: 0;
 }
+.trainers .member .member-img .social i{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
 
 .trainers .member .member-img .social a {
   transition: 0.3s;
-  color: var(--contrast-color);
+  color: #e3b11bba;
   font-size: 20px;
   margin: 0 8px;
 }
 
 .trainers .member .member-img .social a:hover {
-  color: var(--accent-color);
+  color: white;
 }
 
 .trainers .member .member-info {
