@@ -93,7 +93,7 @@ body::before {
   z-index: -1;
 }
 .navmenu a{
-   text-decoration: none;
+  text-decoration: none;
   color: inherit;
 }
 .footer a {
@@ -981,3 +981,21 @@ section,
   font-family: var(--nav-font);
   text-transform: uppercase;
 }
+
+.ss-text{
+  font-size:32px;
+  width: 100%;
+  white-space:nowrap;
+  overflow:hidden;
+  border-right:3px solid #2564eb00;
+  animation:typing 4s steps(100), infinite;
+}
+
+@keyframes typing{
+  from{ width:0; }
+}
+
+@keyframes blink{
+  50%{ border-color:transparent; }
+}
+
