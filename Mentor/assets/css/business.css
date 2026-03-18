@@ -10,10 +10,6 @@
 }
 /*Business Development*/
 
-.business-registration{
-    background: rgb(128,128,128);
-    background: linear-gradient(180deg, rgba(128,128,128,1) 0%, rgba(236,236,236,1) 0%, rgba(255,255,255,1) 100%);
-}
 .business-headers{
 
     padding: 22px;
@@ -22,6 +18,11 @@
     font-weight: 700; 
     margin-left: 4%;
     text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    
     
 }
 .business-dev-prerequisites{
@@ -33,14 +34,21 @@
     margin-right: 7%;
     padding: 12px;
 }  
+ .business-dev-prerequisites  ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    gap:10px;
+    
+}
+
 .fixed-background{
     height: 300px;
-    background-image: url('../images/Services/businessoutdoor4.jpg');
-    background-repeat: no-repeat;
-    background-position: top;
-    background-attachment: fixed;
+    
     transition: 0s linear;
-    transition-property: background-position;
+    
     text-align: center;
     justify-content: center;
     border-radius: 0.5%;
@@ -52,14 +60,16 @@
 }
 
 
-.running-projects{
- 
-}
+
 .MQA-content h2{
     margin-left: 4%;
     color: #29323c;
     font-size: 28px;
     font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
 }
 
 /*End of Business development*/
@@ -104,16 +114,9 @@
     margin-right: 250px;
     z-index: 1000;
 }
-#lns{
-    background: rgb(245,245,245);
-    background: linear-gradient(180deg, rgba(245,245,245,1) 0%, rgba(255,255,255,1) 100%);
-    font-family: 'poppins';
-}
 
-.secondheader{
-    background: rgb(128,128,128);
-    background: linear-gradient(180deg, rgba(128,128,128,1) 0%, rgba(236,236,236,1) 0%, rgba(255,255,255,1) 100%);
-}
+
+
 .secondheader h3{
     text-align: center;
     padding: 35px;
@@ -133,26 +136,25 @@
 }
 
 .l-images{
-    width: 100%;
-    max-width: 100%;
-    justify-content: space-around;
     display: flex;
-    overflow: hidden;
-
+    justify-content:center;
+    align-items: center;
+    margin-bottom: 30px;
+    height: 400px;
+    width: 400px;
+     gap: 20px;
+     margin: 0 auto;
 }
 .l-images img{
-    height: 350px;
-    max-width: 100%;
-    /*width: 750px;*/
-    width: 31%;
-    object-fit: cover;
-    background-position: center;
-    background-size: cover;
-    transition: 0.9s;
-    border-radius: 4px;
-    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
-    margin-bottom: 30px;
-    pointer-events: none;
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 8px;
+   gap: 20px;
+   box-shadow: 8px 8px 10px rgba(0,0,0,0.2);
 }
 .l-images img:hover{
     transform: scale(1.125);
@@ -176,16 +178,16 @@
 }
 .programmes{
     width: auto;
-    background: rgb(128,128,128);
-    background: linear-gradient(180deg, rgba(128,128,128,1) 0%, rgba(236,236,236,1) 0%, rgba(255,255,255,1) 100%);
+    
     
 }
 .programmes-list ul{
-    display: block;
+    display: flex;
     border-left: 4px solid rgb(150, 20, 20); 
     height: fit-content;
     position: relative;
-    margin-left: 25px;
+    justify-content: center;
+    margin: 0 auto;
     flex-wrap: wrap;
 }
 .programmes-list ul{
@@ -250,15 +252,10 @@
 }
 .applications{
     margin-top: 10px;
-    background: rgb(128,128,128);
-    background: linear-gradient(180deg, rgba(128,128,128,1) 0%, rgba(236,236,236,1) 0%, rgba(255,255,255,1) 100%);
+    
 
 }
-.applications-content{
-    background-image: url("../Images/book-watermark.jpg");
-    background-repeat: repeat-x;
-    background-position: left;
-}
+
 .applications-content p{
     margin-left: 8%;
     color: #36454f;
@@ -266,7 +263,7 @@
     text-wrap: wrap;
     font-weight: 400;
     font-size: 1.6rem;
-    background-image: url("../Images/book-watermark.jpg");
+   
 }
 .applications-header{
     text-align: center;
@@ -275,4 +272,5 @@
     color: rgb(10, 78, 146);
     font-size: 48px;
 }
+
 /*End of Learnership*/
