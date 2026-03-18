@@ -92,6 +92,14 @@ body::before {
   pointer-events: none; /* allows clicks through it */
   z-index: -1;
 }
+.navmenu a{
+   text-decoration: none;
+  color: inherit;
+}
+.footer a {
+  text-decoration: none;
+  color: inherit;
+}
 
 a {
   color: var(--accent-color);
@@ -940,14 +948,8 @@ section,
 # Global Section Titles
 --------------------------------------------------------------*/
 .section-title {
-  padding-bottom: 30px;
-  padding-top: 50px;
+  padding-bottom: 60px;
   position: relative;
-}
-
-.section-title h3{
-    font-size: 2rem;
-  font-weight: 700;
 }
 
 .section-title h2 {
