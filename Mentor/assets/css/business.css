@@ -60,10 +60,7 @@
 }
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> bc0e326275721d001e4bcce292c89deddf8abda9
 .MQA-content h2{
     margin-left: 4%;
     color: #29323c;
@@ -277,3 +274,18 @@
 }
 
 /*End of Learnership*/
+
+/* Responsive stacking on mobile */
+@media (max-width: 768px) {
+  .l-images {
+    flex-direction: column;
+    align-items: center;
+    height: 800px;
+    width: 300px;
+  }
+  .l-images img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+}
