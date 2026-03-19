@@ -527,6 +527,7 @@ h6{
     border-radius: 50%;
     transition: 0.3s;
     background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+    
   }
 
   .navmenu a i:hover,
@@ -592,6 +593,7 @@ h6{
   .mobile-nav-active .navmenu>ul {
     display: block;
   }
+  
 }
 
 /*--------------------------------------------------------------
@@ -982,20 +984,5 @@ section,
   text-transform: uppercase;
 }
 
-.ss-text{
-  font-size:32px;
-  width: 100%;
-  white-space:nowrap;
-  overflow:hidden;
-  border-right:3px solid #2564eb00;
-  animation:typing 4s steps(100), infinite;
-}
 
-@keyframes typing{
-  from{ width:0; }
-}
-
-@keyframes blink{
-  50%{ border-color:transparent; }
-}
 

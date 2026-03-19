@@ -495,3 +495,88 @@ align-content: center;
 .icon-box:hover::before {
   opacity: 1;
 }
+
+/*typing text*/
+.ss-text{
+  font-size:32px;
+  width: 100%;
+  white-space:nowrap;
+  overflow:hidden;
+  border-right:3px solid #2564eb00;
+  animation:typing 4s steps(100), infinite;
+}
+
+@keyframes typing{
+  from{ width:0; }
+}
+
+@keyframes blink{
+  50%{ border-color:transparent; }
+}
+
+
+@media (max-width: 768px) {
+  
+  .cover-image {
+  position: absolute;
+  inset: 0;                 /* stretch to fill hero */
+  z-index: 1;               /* behind text */
+
+}
+
+.cover-image img {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* fill hero nicely */
+}
+.hero {
+  position: relative;
+  overflow: hidden;
+  height: 50vh;
+  border-radius: 0 0 0 90px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+/* Text and button on top */
+.hero .container {
+  position: relative;
+  z-index: 3;                /* above image + overlay */
+  text-align: center;
+  padding-bottom: 520px;
+  top: 250px;                  /* vertically center */
+  transform: translateY(-50%);
+  margin-top: 200px;
+}
+
+.hero h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.hero p {
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+margin: 0 auto;
+  font-size: 18px;
+}
+.ss-text{
+  font-size:32px;
+  width: 100%;
+  white-space:nowrap;
+  overflow:hidden;
+  border-right:3px solid #2564eb00;
+  animation:typing 4s steps(100), infinite;
+}
+
+@keyframes typing{
+  from{ width:0; }
+}
+
+@keyframes blink{
+  50%{ border-color:transparent; }
+}
+
+}
