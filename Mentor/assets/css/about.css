@@ -247,3 +247,46 @@
   }
 }
 
+/* Tooltip container */
+.card {
+  position: relative; /* Needed for tooltip positioning */
+  cursor: pointer;
+}
+
+/* Tooltip text */
+.card::after {
+  content: "Click me to download";
+  position: absolute;
+  bottom: 110%; /* Position above the card */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Tooltip arrow */
+.card::before {
+  content: "";
+  position: absolute;
+  bottom: 100%; /* Place just below tooltip box */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent #333 transparent; /* Triangle pointing down */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Show tooltip + arrow on hover */
+.card:hover::after,
+.card:hover::before {
+  opacity: 1;
+}

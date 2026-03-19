@@ -221,3 +221,46 @@
   color: white;
   cursor: pointer;
 }
+/* Tooltip container */
+.collapsible {
+  position: relative; /* Needed for tooltip positioning */
+  cursor: pointer;
+}
+
+/* Tooltip text */
+.collapsible::after {
+  content: "Click me to View Images";
+  position: absolute;
+  bottom: 110%; /* Position above the card */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Tooltip arrow */
+.collapsible::before {
+  content: "";
+  position: absolute;
+  bottom: 100%; /* Place just below tooltip box */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent #333 transparent; /* Triangle pointing down */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Show tooltip + arrow on hover */
+.collapsible:hover::after,
+.collapsible:hover::before {
+  opacity: 1;
+}
