@@ -936,6 +936,64 @@ section,
   background-color: var(--background-color);
   scroll-margin-top: 900px;
   overflow: clip;
+  padding-top: 40px;
+}
+
+
+#trainers-index .section-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* horizontal center */
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+#trainers-index .section-title h2 {
+  font-size: 50px;
+  font-weight: 700;
+  font-family: var(--heading-font);
+  color: #37423b;
+  margin-left: 8rem;
+  text-transform: capitalize;
+}
+
+#trainers-index .section-title p {
+  font-size: 16px;
+  color: #666;
+  margin-top: 2px;
+  letter-spacing: 0.3px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 600px; /* keeps it nicely centered like sponsors */
+}
+
+/* Fix Guiding Minds on mobile */
+@media (max-width: 768px) {
+  .why-us h2 {             /* remove flex */
+    text-align: center;          /* center properly */
+    font-size: 10px;             /* scale down */
+              /* prevent overlap */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+  }
+
+  #trainers-index .section-title p {
+    font-size: 14px;
+    margin-top: 5px;
+    padding: 0 10px;             /* prevent edge touching */
+  }
+  #trainers-index .section-title h2 {
+  font-size: 50px;
+  font-weight: 700;
+  font-family: var(--heading-font);
+  color: #37423b;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+}
 }
 
 @media (max-width: 1199px) {
@@ -950,7 +1008,7 @@ section,
 # Global Section Titles
 --------------------------------------------------------------*/
 .section-title {
-  padding-bottom: 60px;
+  padding-bottom: 10px;
   position: relative;
 }
 
@@ -982,6 +1040,11 @@ section,
   font-weight: 700;
   font-family: var(--nav-font);
   text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  
 }
 
 
