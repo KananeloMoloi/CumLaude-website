@@ -984,5 +984,9 @@ section,
   text-transform: uppercase;
 }
 
-
+.ss-text {
+  font-family: 'Calibri', serif; /* or Friz Quadrata if you have it */
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
 

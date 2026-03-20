@@ -185,8 +185,10 @@
   margin-top: 30px;
   flex-wrap: wrap;
 }
-
 .cards .red {
+  background-color: #71bccf;
+}
+.cards .l-blue {
   background-color: #007e9e;
 }
 
