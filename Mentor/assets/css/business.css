@@ -272,7 +272,21 @@
     color: rgb(10, 78, 146);
     font-size: 48px;
 }
+/*End Internships*/
+.breadcrumbs {
+  position: relative;
+  z-index: 2000; /* higher than jumbo-logo */
+}
 
+.breadcrumbs a {
+  pointer-events: auto; /* ensure clicks are allowed */
+  color: #007bff;
+  text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+  text-decoration: none;
+}
 /*End of Learnership*/
 
 /* Responsive stacking on mobile */
