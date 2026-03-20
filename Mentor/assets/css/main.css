@@ -1022,7 +1022,7 @@ section,
   letter-spacing: 1.5px;
   color: #2dd46a;
   position: relative;
-  padding-bottom: 20px;
+  padding-bottom: 0;
 }
 
 .section-title h2::after {
