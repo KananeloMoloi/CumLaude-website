@@ -9,15 +9,17 @@
   width: 13rem;
 }
 
+/* Collapsible Content */
 .collapsible-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.8s ease-in-out, opacity 0.8s ease-in-out;
   opacity: 0;
+  transition: all 0.5s ease;
   margin-top: 10px;
   margin-bottom: 25px;
 }
-.collapsible-content p{
+
+.collapsible-content p {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,31 +27,61 @@
 }
 
 .collapsible-content.open {
-  max-height: 1000px; /* large enough to fit content */
+  max-height: 1200px;
   opacity: 1;
-  overflow: hidden;
-  object-position: center;
-  margin:0 auto;
-  object-fit: cover;
+  margin: 0 auto;
 }
 
+/* Collapsible Button */
 .collapsible-title {
   cursor: pointer;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 12px 24px;
+  border-radius: 50px;
   text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.5px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
   color: #daba09;
-  transition: background 0.8s ease-in-out, box-shadow 0.8s ease-in-out;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(218, 186, 9, 0.4);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  width: fit-content;
+  margin: 20px auto;
+
+  transition: all 0.3s ease;
 }
 
-.collapsible-title.active {
-  background: #b6b5b5;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
-  width: fit-content;
-  margin: 0 auto;
+/* Arrow icon */
+.collapsible-title::after {
+  content: "▼";
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.collapsible-title:hover {
+  background: #daba09;
   color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(218, 186, 9, 0.4);
+}
+
+/* Active (open state) */
+.collapsible-title.active {
+  background: linear-gradient(135deg, #daba09, #f5e27a);
+  color: #000;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Rotate arrow when open */
+.collapsible-title.active::after {
+  transform: rotate(180deg);
 }
 
 
