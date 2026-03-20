@@ -65,10 +65,13 @@
     margin: 0 auto;
 }
 .secondheader h3{
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    margin-bottom: 30px;
+    margin-left: 4%;
+    margin-right: 4%;
+    padding: 10px;
+    font-weight: 400;
+    color: #36454f;
+    font-size: 22px;
+    line-height: 30px;
 }
 .l-images{
     display: flex;
