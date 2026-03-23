@@ -947,7 +947,6 @@ section,
   background-color: var(--background-color);
   scroll-margin-top: 900px;
   overflow: clip;
-  padding-top: 40px;
 }
 
 
@@ -1054,7 +1053,7 @@ section,
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 20px;
+  padding-top: 2px;
   
 }
 

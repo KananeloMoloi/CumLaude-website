@@ -79,7 +79,6 @@ margin: 0 auto;
 @media (max-width: 768px) {
   .hero h2 { font-size: 32px; }
   .hero p { font-size: 18px; }
-  
 }
 
 /*--------------------------------------------------------------
@@ -92,13 +91,7 @@ margin: 0 auto;
 
 /* Title */
 .why-us h1 {
-  display: flex;
-  justify-content: center;
-  text-decoration-color: #e3b11bba;
-  text-decoration-thickness: 5px;
-  font-weight: 700;
-  font-size: 50px;
-  margin-bottom: 50px;
+  padding-top: 40px;
 }
 
 /* LEFT IMAGE */
@@ -187,15 +180,19 @@ align-content: center;
 # Features Section
 --------------------------------------------------------------*/
 .features {
-  padding: 20px 0;
+  padding: 10px 0 0 0;
+}
+
+.section-title h1 {
+  margin-bottom: 0 !important;
+  padding-bottom: 3px !important;
 }
 
 .sponsors-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 13px; /* 🔥 EXACT spacing between boxes */
-  max-width: 1200px;
-  margin-bottom: 30px;
+  max-width: 98%;
 }
 
 .features-item {
@@ -211,10 +208,6 @@ align-content: center;
 
 /*-------------------------------------------------------------- */
 /* Features Section */
-.features {
-  padding: 0 0 60px 0;
-}
-
 .features h1 {
   display: flex;
   justify-content: center;
@@ -222,8 +215,7 @@ align-content: center;
   text-decoration-thickness: 5px;
   font-weight: 700;
   font-size: 50px;
-  margin-bottom: 50px;
-  margin-top: 0;
+  padding: 25px 0;
 }
 
 .features-item img {
@@ -575,6 +567,47 @@ margin: 0 auto;
 
 @keyframes blink{
   50%{ border-color:transparent; }
+}
+
+}
+
+
+
+@media (max-width: 768px) {
+
+.why-us .why-box {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.why-us .why-box img {
+  border-radius: 10px;
+  width: 93%;
+  height: 100%;
+  object-fit: cover; /* fills like the cards */
+}
+
+
+.col-lg-8 {
+  align-items: center;
+  justify-content: center;
+}
+
+.col-md-6.col-xl-4 {
+  display: flex;
+}
+
+.col-md-6.col-xl-4 a {
+  display: block;
+  width: 100%;
+}
+
+.icon-box {
+  width: 100%;
+  height: 100%;
 }
 
 }
