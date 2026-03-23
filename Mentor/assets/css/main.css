@@ -1004,6 +1004,19 @@ section,
   margin-bottom: 10px;
   text-transform: capitalize;
 }
+
+/*Footer copyright*/
+.footer-bottom{
+  font-size: 11px;
+  text-align: center;
+  padding: 20px 0 10px;
+  color: white;
+  background: blue; /* key */
+}
+
+.footer-bottom .all-right {
+
+}
 }
 
 @media (max-width: 1199px) {
@@ -1065,6 +1078,7 @@ section,
 
 /*Footer copyright*/
 .footer-bottom{
+  font-size: 11px;
   text-align: center;
   padding: 20px 0 10px;
   color: white;
