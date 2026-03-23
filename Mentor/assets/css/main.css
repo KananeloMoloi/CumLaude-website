@@ -67,6 +67,17 @@
   scroll-behavior: smooth;
 }
 
+:root{
+   --footer-gradient: linear-gradient(to bottom, #000000, #4d3e0ed9);
+}
+
+.footer{
+  background: var(--footer-gradient);
+}
+.footer-bottom{
+  background: var(--footer-gradient);
+}
+
 /*--------------------------------------------------------------
 # General Styling & Shared Classes
 --------------------------------------------------------------*/
@@ -602,9 +613,9 @@ h6{
  color: white;
  font-weight: 500;
  /* background-color: #000; */
-  background: linear-gradient(to bottom, #000000, #4d3e0ed9);
+  background: linear-gradient(to bottom, #000000 0%, #4d3e0ed9 100%);
   font-size: 14px;
-  padding-bottom: 50px;
+  padding-bottom: 0px;
   position: relative; 
 
 }
@@ -1052,3 +1063,10 @@ section,
   text-transform: uppercase;
 }
 
+/*Footer copyright*/
+.footer-bottom{
+  text-align: center;
+  padding: 20px 0 10px;
+  color: white;
+  background: transparent; /* key */
+}
