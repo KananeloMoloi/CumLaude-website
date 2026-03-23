@@ -610,4 +610,10 @@ margin: 0 auto;
   height: 100%;
 }
 
+.sponsors-grid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
 }
+
+}
+
