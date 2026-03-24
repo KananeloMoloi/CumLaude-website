@@ -296,3 +296,311 @@
 .collapsible:hover::before {
   opacity: 1;
 }
+@media (max-width: 768px) {
+  :root{
+    font-size: 13px;
+  }
+  .container h1{
+    font-size: 30px !important;
+  }
+
+  /*mobile gallery */
+  .logo-picture{
+  height: 100%;
+  width: 15%;
+  margin-right: 16rem;
+  object-fit: fill;
+}
+.logo-picture img{
+  height: 5rem;
+  width: 13rem;
+}
+
+/* Collapsible Content */
+.collapsible-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.5s ease;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.collapsible-content p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.collapsible-content.open {
+  max-height: 1200px;
+  opacity: 1;
+  margin: 0 auto;
+}
+
+/* Collapsible Button */
+.collapsible-title {
+  cursor: pointer;
+  padding: 12px 24px;
+  border-radius: 50px;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+  color: #daba09;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(218, 186, 9, 0.4);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  width: fit-content;
+  margin: 20px auto;
+
+  transition: all 0.3s ease;
+}
+
+/* Arrow icon */
+.collapsible-title::after {
+  content: "▼";
+  font-size: 12px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect */
+.collapsible-title:hover {
+  background: #daba09;
+  color: #000;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(218, 186, 9, 0.4);
+}
+
+/* Active (open state) */
+.collapsible-title.active {
+  background: linear-gradient(135deg, #daba09, #f5e27a);
+  color: #000;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Rotate arrow when open */
+.collapsible-title.active::after {
+  transform: rotate(180deg);
+}
+
+
+.decription{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+}
+.decription h2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #daba09;
+}
+.decription p{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+/* gallery slider */
+/* From Uiverse.io by ashwin_5681 */ 
+.card {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  color: white;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.card img {
+  width:100%;
+  height: 100%;
+  object-fit: cover;
+ border-radius: 8px;
+ box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.card p {
+  font-size: 14px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.slider {
+  width: 100%;
+  height: var(--height);
+  position: relative;
+  overflow: visible; /* allow items to spill out */
+  mask-image: linear-gradient(to right, transparent, #000 10% 90%, transparent);
+  margin-bottom: 25px;
+}
+
+.slider .list {
+  display: flex;
+  width: 100%;
+  min-width: calc(var(--width) * var(--quantity));
+  position: relative;
+}
+/* Base item */
+.slider .list .item {
+  width: var(--width);
+  height: var(--height);
+  position: absolute;
+  left: 100%;
+  animation: autoRun 20s linear infinite;
+  transition: transform 0.4s ease, filter 0.4s ease, box-shadow 0.4s ease;
+  animation-delay: calc(
+    (20s / var(--quantity)) * (var(--position) - 1) - 20s
+  ) !important;
+}
+
+
+/* Optional: pause animation when hovering */
+.slider:hover .item {
+  animation-play-state: paused !important;
+  filter: grayscale(1);
+}
+
+/* Blur and shrink non-hovered items when slider is hovered */
+.slider:hover > .list > .item:not(:hover) {
+  filter: blur(3px) grayscale(1);
+  transform: scale(0.9);
+  z-index: 1;
+}
+
+.slider .list .item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+@keyframes autoRun {
+  from {
+    left: 100%;
+  }
+  to {
+    left: calc(var(--width) * -1);
+  }
+}
+.slider:hover .item {
+  animation-play-state: paused !important;
+  filter: grayscale(1);
+}
+.slider .item:hover {
+  filter: grayscale(0);
+}
+.slider[reverse="true"] .item {
+  animation: reversePlay 20s linear infinite;
+}
+@keyframes reversePlay {
+  from {
+    left: calc(var(--width) * -1);
+  }
+  to {
+    left: 100%;
+  }
+}
+/* scroll images view*/
+/* Lightbox overlay */
+.lightbox {
+  display: none; /* hidden by default */
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Image inside lightbox */
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(255,255,255,0.3);
+}
+
+/* Navigation buttons */
+.lightbox .prev, .lightbox .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  user-select: none;
+}
+
+.lightbox .prev { left: 20px; }
+.lightbox .next { right: 20px; }
+
+/* Close button */
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+/* Tooltip container */
+.collapsible {
+  position: relative; /* Needed for tooltip positioning */
+  cursor: pointer;
+}
+
+/* Tooltip text */
+.collapsible::after {
+  content: "Click me to View Images";
+  position: absolute;
+  bottom: 110%; /* Position above the card */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Tooltip arrow */
+.collapsible::before {
+  content: "";
+  position: absolute;
+  bottom: 100%; /* Place just below tooltip box */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent #333 transparent; /* Triangle pointing down */
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Show tooltip + arrow on hover */
+.collapsible:hover::after,
+.collapsible:hover::before {
+  opacity: 1;
+}
+}

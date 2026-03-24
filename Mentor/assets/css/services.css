@@ -207,6 +207,24 @@
 }
 
 @media (max-width: 767px) {
+  :root p{
+  font-size: 13px;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-decoration-thickness: 5px;
+    padding: 10px ;
+}
+  .container h1{
+    font-size: 20px !important;
+    font-weight: 700;
+}
+
+  .container .testimonial-wrap h3{
+    font-size: 15px;
+  }
   .testimonials .testimonial-wrap {
     padding-left: 0;
   }
