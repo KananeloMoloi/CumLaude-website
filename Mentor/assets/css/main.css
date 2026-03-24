@@ -1013,6 +1013,17 @@ section,
     scroll-margin-top: 66px;
   }
 }
+/* MOBILE: stack items → use bottom border */
+@media (max-width: 767px) {
+  .col-lg-4 {
+    border-right: none; /* remove desktop border */
+    border-bottom: 3px solid #ffc3002e;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+
+  
+}
 
 /*--------------------------------------------------------------
 # Global Section Titles
