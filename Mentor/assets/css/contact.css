@@ -2,8 +2,7 @@
 # Contact Section
 --------------------------------------------------------------*/
 .contact {
-  padding-top: 8px;
-  padding-bottom: 40px;
+  padding: 8px 15px 40px 15px;
 }
 
 .contact .info-item+.info-item {
@@ -359,12 +358,35 @@
 
 .container-button {
   width: 100%;
-  
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 .button:not(:last-child) {
   margin-bottom: 64px;
+}
+
+/* Desktop */
+.map-frame {
+  width: 80%;
+  height: 300px;
+  border: 0;
+  border-radius: 20px;
+  display: block;
+  margin: 50px auto 0;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .map-frame {
+    width: 100%;
+  }
+
+  .button{
+    width: 150px;
+    height: 40px;
+    font-size: 10px;
+  }
 }
