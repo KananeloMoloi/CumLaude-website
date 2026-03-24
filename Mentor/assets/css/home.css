@@ -211,7 +211,6 @@ align-content: center;
 .features h1 {
   display: flex;
   justify-content: center;
-  text-decoration-color: #e3b11bba;
   text-decoration-thickness: 5px;
   font-weight: 700;
   font-size: 50px;
@@ -506,12 +505,19 @@ align-content: center;
 
 
 @media (max-width: 768px) {
-  
+  :root p{
+  font-size: 13px;
+}
   .cover-image {
   position: absolute;
   inset: 0;                 /* stretch to fill hero */
   z-index: 1;               /* behind text */
 
+}
+.why-us .icon-box h4 {
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 15px;
 }
 
 .cover-image img {
@@ -552,13 +558,21 @@ align-content: center;
 margin: 0 auto;
   font-size: 18px;
 }
-.ss-text{
+.ss-text {
   font-size:32px;
   width: 100%;
   white-space:nowrap;
   overflow:hidden;
   border-right:3px solid #2564eb00;
-  animation:typing 4s steps(100), infinite;
+  animation:typing g 4s steps(100), infinite;
+}
+.features h1 {
+  display: flex;
+  justify-content: center;
+  text-decoration-thickness: 5px;
+  font-weight: 700;
+  font-size: 30px;
+  padding: 25px 0;
 }
 
 @keyframes typing{
@@ -574,6 +588,15 @@ margin: 0 auto;
 
 
 @media (max-width: 768px) {
+.container .ss-text2 {
+  color:rgb(233, 223, 223);
+  font-size:13px;
+  width: 90%;
+  white-space:nowrap;
+  overflow:hidden;
+  letter-spacing: 0;
+ 
+}
 
 .why-us .why-box {
   height: 100%;

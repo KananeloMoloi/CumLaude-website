@@ -1,6 +1,20 @@
+
 /*--------------------------------------------------------------
 # About Us Section
 --------------------------------------------------------------*/
+.cards .card a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100px;
+    width: 300px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 400ms;
+}
 .about-us img{
   margin-top: 100px;
 }
@@ -151,10 +165,30 @@
 }
 
 @media (max-width: 767px) {
+  :root p{
+  font-size: 13px;
+}
+.cards .card a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100px;
+    width: 300px;
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 400ms;
+}
   .testimonials .testimonial-wrap {
     padding-left: 0;
   }
-
+  .about-us .content h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  font-size: 30px;
+}
   .testimonials .testimonials-carousel,
   .testimonials .testimonials-slider {
     overflow: hidden;
@@ -241,10 +275,14 @@
 }
 /* Responsive stacking on mobile */
 @media (max-width: 768px) {
+  .container h1{
+    font-size: 30px !important;
+  }
   .cards {
     flex-direction: column;
     align-items: center;
   }
+
 
   .cards .card {
     width: 90%; /* full width with padding */
