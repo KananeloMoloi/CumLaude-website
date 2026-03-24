@@ -23,6 +23,8 @@
   border-radius: 0 0 0px 90px;
   box-shadow: 0 20px 40px rgba(0,0,0,0.6);
   margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
@@ -492,7 +494,7 @@ h6{
 
   .navmenu {
     padding: 0;
-    z-index: 9997;
+    z-index: 9999;
   }
 
   .navmenu ul {
@@ -599,10 +601,13 @@ h6{
     inset: 0;
     background: rgba(33, 37, 41, 0.8);
     transition: 0.3s;
+    z-index: 9999;
   }
 
   .mobile-nav-active .navmenu>ul {
     display: block;
+     z-index: 10000;
+    position: relative
   }
   
 }
@@ -912,6 +917,7 @@ position: fixed;
 .page-title nav {
   background-color: color-mix(in srgb, var(--accent-color) 90%, black 5%);
   padding: 20px 0;
+  z-index: 0;
 }
 
 .page-title nav a {
