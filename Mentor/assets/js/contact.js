@@ -10,7 +10,7 @@ sendButton.addEventListener('click', function(e){
 
     const formData = new FormData(form);
 
-    fetch('../email.php', {
+    fetch('email.php', {
         method: 'POST',
         body: formData
     })

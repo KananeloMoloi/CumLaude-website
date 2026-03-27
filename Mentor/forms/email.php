@@ -13,7 +13,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     }
 
     // 1️⃣ Send email to you
-    $to = " info@cumlaudeinstitute.co.za"; // must be your cPanel email
+    $to = "info@cumlaudeinstitute.co.za"; // must be your cPanel email
     $headers = "From: ".$to."\r\n"; // important: use your own email as From
     $headers .= "Reply-To: ".$email."\r\n"; // user's email goes here
     $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
