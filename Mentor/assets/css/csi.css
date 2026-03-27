@@ -1,3 +1,4 @@
+
 .courses{
   display: flex;
   flex-wrap: wrap;
@@ -33,6 +34,16 @@
   width: 13rem;
 }
 @media(max-width:768px){
+  :root p{
+  font-size:13px ;
+  }
+  .container h1{
+    font-size: 30px !important ;
+    
+  }
+  .container .card p{
+    font-size: 13px;
+  }
   .courses .container .row{
   display: flex;
   flex-wrap: wrap;
@@ -45,7 +56,7 @@
 .col-lg-4 {
   width: 100%;
   margin: 0 auto;
-  padding: 0;
+  
 }
 }
 /*card flip*/

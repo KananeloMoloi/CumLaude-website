@@ -96,7 +96,12 @@ button:hover {
 }
 
 @media (max-width: 768px) {
-
+  :root{
+    font-size: 13px;
+  }
+  .container h1{
+    font-size: 30px !important;
+  }
   .no-job button {
     width: 110px;
     height: 40px; 

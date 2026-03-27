@@ -380,6 +380,13 @@
 
 /* Mobile */
 @media (max-width: 768px) {
+  :root p{
+    font-size: 13px;
+
+  }
+  .container h1{
+    font-size: 30px !important;
+  }
   .map-frame {
     width: 100%;
   }
