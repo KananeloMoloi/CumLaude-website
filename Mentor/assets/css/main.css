@@ -609,7 +609,7 @@ h6{
   }
 
   .mobile-nav-active .mobile-nav-toggle {
-    color: #fff;
+    color: #ffc107;
     position: absolute;
     font-size: 32px;
     top: 15px;
@@ -624,8 +624,8 @@ h6{
     inset: 0;
     background:linear-gradient(
     135deg,
-    var(--nav-mobile-background-color),
-    color-mix(in srgb, var(--default-color), transparent 20%)
+    black,
+    color-mix(in srgb, white, transparent 20%)
   );
     transition: 0.3s;
     z-index: 9999;
