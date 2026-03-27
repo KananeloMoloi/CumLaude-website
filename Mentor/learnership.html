@@ -1,250 +1,248 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CumLaude Institute | Learnership</title>
-    <link rel="stylesheet" href="css/lightbox.min.css">
-    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" >
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <script type="text/javascript" src="js/lightbox-plus-jquery.min.js"></script>
 
-    <!--test-->
-<!-- Favicons -->
- <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/img site/logo-updated.png">
-  
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com" rel="preconnect">
-  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+<title>CumLaude Institute | Learnerships</title>
 
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-<!--test end-->
-    <link rel="stylesheet" href="assets/css/main.css">
-    <link rel="stylesheet" href="assets/css/learn.css">
+<!-- AOS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <!--<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'> -->
-    <!-- Option 1: Include in HTML -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+<!-- Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f8f9fa;
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), 
+              url('images/Services/RIGG1614.JPG') center/cover no-repeat;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  color: white;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 55px;
+  font-weight: 800;
+}
+
+.hero-content p {
+  font-size: 20px;
+  max-width: 700px;
+  margin: auto;
+}
+
+.btn-main {
+  background: #c2a70e;
+  color: white;
+  margin-top: 20px;
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 5px;
+}
+
+/* SECTION */
+.section {
+  padding: 60px 10%;
+}
+
+/* INTRO */
+.intro {
+  text-align: center;
+  max-width: 900px;
+  margin: auto;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+/* PROGRAMMES */
+.programme-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.programme-card {
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+  border-top: 4px solid #c2a70e;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.programme-card:hover {
+  transform: translateY(-5px);
+}
+
+/* HOST COMPANIES */
+.host-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  align-items: center;
+}
+
+.host-grid img {
+  width: 100%;
+  max-height: 80px;
+  object-fit: contain;
+  filter: grayscale(100%);
+}
+
+.host-grid img:hover {
+  filter: grayscale(0%);
+}
+
+/* IMAGE GRID */
+.img-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.img-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* CTA */
+.cta {
+  background: #c2a70e;
+  color: white;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.cta h2 {
+  font-weight: 700;
+}
+
+.cta a {
+  background: black;
+  color: white;
+  padding: 12px 25px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+/* MOBILE */
+@media(max-width:768px) {
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .programme-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .host-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .img-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
 </head>
+
 <body>
-    <!-- Header -->
-   <header id="header" class="header d-flex align-items-center sticky-top">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
- <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment the line below if you also wish to use an image logo -->
-        <!-- <img src="assets/img/logo.webp" alt=""> -->
-        <a href="index.html"><img src="images/updated-logo-removebg.png" alt="" class="logo-picture"></a>
-      </a>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content" data-aos="fade-up">
+    <h1>Learnership Programmes</h1>
+    <p>
+      Combining classroom learning with real workplace experience to build skills and career opportunities.
+    </p>
+    <a href="apply.html" class="btn-main">Apply for Learnership</a>
+  </div>
+</section>
 
-      <nav id="navmenu" class="navmenu">
-        <ul>
-          <li><a href="index.html">Home<br></a></li>
-          <li><a href="internship.html">Internship</a></li>
-          <li><a href="learnership.html" class="active">Learnership</a></li>
-          <li><a href="BusinessDevelopment.html">Business Development</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="csiproject.html">CSI Project</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-         <li><a href="contact.html">Contact</a></li>
-          <li><a href="apply.html">Apply</a></li>
-        </ul>
-        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-      </nav>
+<!-- INTRO -->
+<section class="section">
+  <div class="intro" data-aos="fade-up">
+    <p>
+      CumLaude Institute offers accredited learnership programmes that run for 12 months, 
+      combining 70% workplace experience and 30% classroom-based learning.
+    </p>
+  </div>
+</section>
 
-     
+<!-- PROGRAMMES -->
+<section class="section">
+  <h2 class="text-center mb-4" data-aos="fade-up">Our Programmes</h2>
 
-    </div>
-  </header>
-  <!-- Page Title --->
-    <div class="page-title" data-aos="fade">
-      <div class="heading">
-        <div class="container">
-          <div class="row d-flex justify-content-center text-center">
-            <div class="col-lg-8">
-              <h1>Learnerships</h1>
-              <p class="mb-0"> We develop our learners with a good balance of structured learning and host employment 
-                for practical training and skills development</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <nav class="breadcrumbs">
-        <div class="container">
-          <ol>
-            <li><a href="./index.html">Home</a></li>
-            <li class="current">Learnerships</li>
-          </ol>
-        </div>
-      </nav>
-    </div><!-- End Page Title -->
+  <div class="programme-grid" data-aos="zoom-in">
 
-    <!-- End Header -->
+    <div class="programme-card">✔ Generic Management L4/L5</div>
+    <div class="programme-card">✔ New Venture Creation L4</div>
+    <div class="programme-card">✔ Business Practice</div>
+    <div class="programme-card">✔ Quality Management System</div>
+    <div class="programme-card">✔ Payroll Administration</div>
+    <div class="programme-card">✔ Wealth Management L4</div>
+    <div class="programme-card">✔ Food & Beverage L1</div>
+    <div class="programme-card">✔ Health & Safety L3</div>
 
-    <section id="lns">
-        <div class="secondheader">
-            <h3>Cumlaude Institute offers accredited learnerships and accredited skills programmes.
-                 Our learnership programmes run for a 12 month period, which consist of 70% 
-                workplace experience in the actual field of study and 30% theory in the classroom.</h3>
-            <div class="l-images">
-                <img src="images/Services/RIGG1614.JPG" alt="1">
-                <img src="images/Services/RIGG1619.JPG" alt="2">
-                <img src="images/Services/RIGG1629.JPG" alt="3">
-            </div>
-        </div>
-        
+  </div>
+</section>
 
-        <div class="programmes">
-            <div class="programmes-header">
-                <h1>Our Programmes</h1>
-            </div>
-            <div class="programmes-list">
-                <ul>
-                    <li>&check; &nbsp; Generic Management L4/L5</li>
-                    <li>&check; &nbsp; New Venture Creation L4</li>
-                    <li>&check; &nbsp; Business Practice</li>
-                    <li>&check; &nbsp; Quality Management System</li>
-                    <li>&check; &nbsp; Payroll Administation Services</li>
-                </ul>
-                <ul>
-                    <li>&check; &nbsp; Wealth Management L4</li>
-                    <li>&check; &nbsp; Food & Beverage Handling Process L1</li>
-                    <li>&check; &nbsp; Skills Programmes</li>
-                    <li>&check; &nbsp; Health & Safety L3</li>
-                    <li>&check; &nbsp; Construction</li>
-                </ul>
-            </div>
-            <p>
-                <i>Follow us on Facebook and LinkedIn to learn more about available <strong>learnerships</strong></i>
-            </p>
-        </div>
-        <div class="hostemployment">
-            <div class="hostemployment-header">
-                <h1>Host Employment</h1>
-            </div>
-            <div class="hosts">
-                <div class="hosts-images">                    
-                    <img src="images/Services/Econo-Foods-Logo.png" alt="Econo Foods">
-                    <img src="images/Services/SEDA-logo.webp" alt="Small Enterprise Development Agency">
-                    <img src="images/Services/prolife.jpg" alt="Prolife Empowerment">
-                    <img src="images/Services/chickenlicken.webp" alt="Chicken Licken">
-                    <img src="images/Services/Spar-Symbol.png" alt="Super Spar">
-                    <img src="images/Services/DOH-logo.jpg" alt="Department of Health"> 
-                </div>
-            </div>
-            <p><span>O</span>ur learners are placed in established institutions and companies to ensure they receive sufficient exposure to their specific industry
-                 during their practicals.</p>          
-        </div> 
-        <div class="l-images">
-            <img src="images/Services/host1.jpg" alt="host1">
-            <img src="images/Services/host2.JPG" alt="host2">
-            <img src="images/Services/host3.jpg" alt="host3">
-        </div>
-        
-        <div class="applications">
-            <div class="applications-content">
-                <h2 class="applications-header">Learn With Us</h2>
-                <p>
-                    Differently abled applicants from the eastern Free State that are between the ages of 18 - 35 are invited to apply for a 12 months learnership programme
-                    <br/><br/>
-                    Applicants must forward all the required documents to the email address below with the reference number on the subject
-                    <br/><br/>
-                    Application Reference: <strong>CumlaudeQQ058</strong><br/>
-                    Address: <strong>recruitment@cumlaudeinstitute.co.za</strong>
-                    <br/><br/>
-                    Please attach a detailed CV, certified copies[Not older than 3 months] of your ID, Matric certificate, proof of disability and other relevant qualifications
-                    <br/><br/>
-                    For enquiries, call 058 713 1300 or visit our offices at 1348 Parliament Road, De Bult.
-                </p>
-            </div>
-        </div>
-    </section>
+<!-- HOST EMPLOYMENT -->
+<section class="section">
+  <h2 class="text-center mb-4" data-aos="fade-up">Host Employment</h2>
+
+  <div class="host-grid" data-aos="zoom-in">
+    <img src="images/Services/Econo-Foods-Logo.png">
+    <img src="images/Services/SEDA-logo.webp">
+    <img src="images/Services/prolife.jpg">
+    <img src="images/Services/chickenlicken.webp">
+    <img src="images/Services/Spar-Symbol.png">
+    <img src="images/Services/DOH-logo.jpg">
+  </div>
+
+  <div class="img-grid">
+    <img src="images/Services/host1.jpg">
+    <img src="images/Services/host2.JPG">
+  </div>
+
+</section>
+
+<!-- CTA -->
+<section class="cta" data-aos="zoom-in">
+  <h2>Join Our Learnership Programme</h2>
+  <p>Gain real skills and industry experience.</p>
+  <a href="apply.html">Apply Now</a>
+</section>
+
+<!-- JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+AOS.init();
+</script>
+
 </body>
-      <footer id="footer" class="footer position-relative light-background">
-
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">
-              <h1 class="footer-h1">CumLaude Institute</h1></span>
-          </a>
-          <div class="footer-contact list-footer pt-3">
-            <p>1349 Parliament Rd, De built </p>
-            <p>Phuthaditjhaba, 9870</p>
-            <p>Free State, South Africa</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>058 713 1300</span></p>
-            <p><strong>Email:</strong> <span>info@cumlaudeinstitute.co.za</span></p>
-          </div>
-          
-        </div>
-
-          <div class="col-lg-4 col-md-3 footer-links">
-          <h1 class="footer-h1">Our Social</h1>
-           <div class="social-links">
-    <a href="https://twitter.com/CumInstitute" target="_blank"><i class="bi bi-twitter-x"></i></a>
-    <a href="https://www.facebook.com/CumLaudeInstitute" target="_blank"><i class="bi bi-facebook"></i></a>
-    <a href="https://www.instagram.com/cumlauderesearchinstitute?igsh=MWVvZThxb2JwY2EwNQ==" target="_blank"><i class="bi bi-instagram"></i></a>
-    <a href="https://www.linkedin.com/in/cum-laude-institute-36142a23a" target="_blank"><i class="bi bi-linkedin"></i></a>
-  </div>
-        </div>
-
-        <div class="col-lg-4 col-md-12 footer-newsletter">
-          <h1 class="footer-h1">Reviews</h1>
-          <p class="list-footer">Share your thoughts with us</p>
-          <form action="forms/newsletter.php" method="post" class="php-email-form">
-            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-            <div class="loading">Loading</div>
-            <div class="error-message"></div>
-            <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-          </form>
-        </div>
-
-      </div>
-    </div>
-
-      <!--Copyright-->
-  <div class="footer-bottom">
-      <p>Copyright &copy;2026 CumLaude Institute. All Rights Reserved</p>
-  </div>
-
-  </footer>
-
-  
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-
-
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-
-
-
 </html>
