@@ -351,6 +351,37 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
+<!---visit tracking--->
+
+<script>
+let sessionId = localStorage.getItem("sessionId");
+
+if (!sessionId) {
+    sessionId = crypto.randomUUID();
+    localStorage.setItem("sessionId", sessionId);
+}
+
+async function trackVisit() {
+    try {
+        await fetch("https://localhost:7176/api/Visits", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                pageUrl: window.location.pathname,
+                userAgent: navigator.userAgent,
+                referrer:document.referrer,
+                sessionId: sessionId
+            })
+        }).then(() => console.log("Visit tracked"));
+    } catch (error) {
+        console.log("Tracking failed:", error);
+    }
+}
+
+trackVisit();
+</script>
 </body>
 
 </html>
