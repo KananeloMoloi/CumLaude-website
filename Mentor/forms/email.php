@@ -13,9 +13,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     }
 
     // 1️⃣ Send email to you
-    $to = "info@cumlaudeinstitute.co.za"; // must be your cPanel email
-    $headers = "From: ".$to."\r\n"; // important: use your own email as From
-    $headers .= "Reply-To: ".$email."\r\n"; // user's email goes here
+    $headers = "From: moloimartin8@gmail.com\r\n";
+    $headers .= "Reply-To: $email\r\n";
+    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
     $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
 
     $sentToYou = mail($to, $subject, $body, $headers);
