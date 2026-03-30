@@ -1,36 +1,41 @@
 // Get the form and popup
-const form = document.getElementById('contact-form');
-const popup = document.getElementById('popup');
-
-// Get your custom link button
-const sendButton = document.querySelector('.container-button .button');
-
-sendButton.addEventListener('click', function(e){
-    e.preventDefault(); // Prevent the <a> link from navigating
-
-    const formData = new FormData(form);
-
-    fetch('email.php', {
-        method: 'POST',
-        body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-        if(data.success){
-            // Show floating popup
-            popup.style.display = 'block';
-            form.reset();
-        } else {
-            alert('Error sending message. Please try again.');
-        }
-    })
-    .catch(error => {
-        console.error('Error:', error);
-        alert('Error sending message. Please try again.');
-    });
-});
+const popup = document.getElementById('my-form-status');
 
 // Close popup function
-function closePopup(){
-    popup.style.display = 'none';
-}
+
+
+  var form = document.getElementById("my-form");
+  
+  async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("my-form-status");
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: {
+          'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        // Show floating popup
+            popup.style.display = 'block';
+            form.reset();
+        // Hide popup after 3 seconds
+        setTimeout(() => {
+            popup.style.display = 'none';
+        }, 3000);
+      } else {
+        response.json().then(data => {
+          if (Object.hasOwn(data, 'errors')) {
+            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+          } else {
+            status.innerHTML = "Oops! There was a problem submitting your form"
+          }
+        })
+      }
+    }).catch(error => {
+      status.innerHTML = "Oops! There was a problem submitting your form"
+    });
+  }
+  form.addEventListener("submit", handleSubmit)

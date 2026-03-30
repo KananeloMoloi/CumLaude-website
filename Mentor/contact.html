@@ -131,7 +131,7 @@
           </div> 
 
           <div class="col-lg-8">
-  <form id="contact-form" class="php-email-form" method="POST" action="email.php" data-aos="fade-up" data-aos-delay="200">
+  <form  id="my-form" action="https://formspree.io/f/xnjodnro" method="POST"  data-aos="fade-up" data-aos-delay="200">
     <div class="row gy-4">
 
       <div class="col-md-6">
@@ -153,10 +153,10 @@
         <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""
           style="background-color: rgba(0, 0, 0, 0.3); color: #fff; border: 1px solid rgb(180, 133, 5);"></textarea>
       </div>
-
+      
       <div class="col-md-12 text-center">
         
-
+          <div class="button-container">
        <!-- From Uiverse.io by marcelodolza --> 
             <button type="submit" class="button">
               <div class="outline"></div>
@@ -236,17 +236,18 @@
                 </p>
               </div>
             </button>
-
+            </div>
 
       </div>
 
+       <div id="my-form-status" style="display: block;place-content: center;align-items: center;align-self: center;bottom: 780px;background: goldenrod;color: white;width: fit-content;border-radius: 8px;box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px;z-index: 1000;padding: 7px 5px !important;margin: 0 auto;">
+  Message sent successfully!
+  
+</div>
     </div>
   </form>
 
-  <div id="popup" style="display:none; position:fixed; bottom:20px; right:20px; background:#1e90ff; color:white; padding:15px 20px; border-radius:8px; box-shadow:0 4px 8px rgba(0,0,0,0.2); z-index:1000;">
-  Message sent successfully!
-  <button onclick="closePopup()" style="margin-left:10px; background:white; color:#1e90ff; border:none; padding:5px 10px; border-radius:5px; cursor:pointer;">Close</button>
-</div>
+ 
 </div><!-- End Contact Form -->
 
         </div>

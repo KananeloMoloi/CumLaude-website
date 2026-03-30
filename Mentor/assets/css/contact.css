@@ -114,6 +114,13 @@
 
 
 /* From Uiverse.io by marcelodolza */ 
+.button-container {
+  display: flex;
+  justify-content: center;   /* Horizontal centering */
+  align-items: center;       /* Vertical centering if container has height */
+  width: 100%;
+  margin: 20px 0;            /* Spacing around the button */
+}
 .button {
   --primary: #b48505;
   --neutral-1: #f7f8f7;
@@ -139,6 +146,24 @@
   font-style: normal;
   font-size: 18px;
   font-weight: 600;
+  margin: 0 auto;
+}
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .button {
+    width: 80%;
+              /* Button expands on smaller screens */
+    font-size: 16px;         /* Slightly smaller text for balance */
+  }
+  .outline {
+  position: absolute;
+  border-radius: inherit;
+  overflow: hidden;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  inset: -2px -3.5px;
+}
 }
 .button:hover {
   transform: scale(1.02);
@@ -179,6 +204,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
 }
 .state .icon {
   position: absolute;
