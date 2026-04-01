@@ -35,6 +35,10 @@ let loaderMobile = document.querySelector(".intro-mobile");
 
   },5000)
 })
+//preloader
+document.addEventListener('DOMContentLoaded', () => {
+  preloader.classList.add('hidden');
+});
 
 
 (function() {
@@ -94,12 +98,12 @@ let loaderMobile = document.querySelector(".intro-mobile");
   /**
    * Preloader
    */
-  const preloader = document.querySelector('#preloader');
-  if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.remove();
-    });
-  }
+ const preloader = document.querySelector('#preloader');
+if (preloader) {
+  document.addEventListener('DOMContentLoaded', () => {
+    preloader.remove();
+  });
+}
 
   /**
    * Scroll top button

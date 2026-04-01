@@ -842,6 +842,10 @@ h6{
   height: 60px;
   animation: animate-preloader 1.5s linear infinite;
 }
+#preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
 
 @keyframes animate-preloader {
   0% {
