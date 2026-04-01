@@ -5,6 +5,37 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+window,addEventListener("load",()=>{
+//Desktop view
+  let intro = document.querySelector(".intro-img");
+  let loader = document.querySelector(".intro-loader");
+// mobile 
+let introMobile = document.querySelector(".intro-mobile-img");
+let loaderMobile = document.querySelector(".intro-mobile");
+
+//Desktop view
+  setTimeout(()=>{
+    intro.style.opacity='1';
+    intro.style.transform="tranlateY(0)";
+  },300)
+
+  setTimeout(()=>{
+    loader.style.top="-200%";
+
+  },5000)
+
+  //Mobile view
+  setTimeout(()=>{
+    introMobile.style.opacity='1';
+    introMobile.style.transform="tranlateY(0)";
+  },300)
+
+  setTimeout(()=>{
+    loaderMobile.style.top="-200%";
+
+  },5000)
+})
+
 
 (function() {
   "use strict";
