@@ -90,39 +90,34 @@
       </nav>
     </div><!-- End Page Title -->
 
-    <!---IF POSITION AVAILABLE UNCOMMENT ELSE LEAVE COMMETED OUT-->
-    <!-- Job Section -->
-    <section id="pricing" class="pricing section">
-      <!---
-      <div class="container">
+<section id="pricing" class="pricing section">
 
-        <div class="job-over">
+  <div class="container">
+<h1>Jobs available</h1>
+    <table class="jobs-table">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Requirements</th>
+      <th>Type</th>
+      <th>Stipend</th>
+      <th>Action</th>
+    </tr>
+  </thead>
 
-          <div class="job-container" data-aos="fade-up" data-aos-delay="100">
-            <div class="job-item">
-              <h3>Job Name</h3>
-              <p>Write your description here</p>
-              <p><strong>Requirements:</strong></p>
-              <span><strong>Date: 2023-12-31</strong></span>
-              <div class="btn-wrap">
-                <a href="#" class="btn-buy">Apply Now</a>
-              </div>
-            </div>
-          </div>
-          <!-- End job Item -->
-          
-          <div class="no-job">
-            <p>Currently no positions available or open for application.</p>
-            <!-- From Uiverse.io by SteveBloX --> 
-            <button type="submit" onclick="window.location.href='index.html'">Back to Home</button>
+  <tbody id="jobsTableBody"></tbody>
+</table>
 
-          </div>
-         
-        </div>
+<!-- No jobs message -->
+<div id="noJobs" class="no-job">
+  <p>Currently no positions available or open for application.</p>
+</div>
+    </div>
 
-      </div>
+  </div>
 
-    </section><!-- /Job Section -->
+</section>
 
   </main>
 

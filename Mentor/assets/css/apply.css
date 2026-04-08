@@ -117,3 +117,88 @@ button:hover {
   }
 
 }
+
+.jobs-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    color: rgb(31, 31, 31);
+    margin-bottom: 20px;
+}
+
+.jobs-table th,
+.jobs-table td {
+    border: 1px solid #333;
+    padding: 12px;
+    text-align: center;
+   
+}
+
+.jobs-table th {
+    background-color: #111;
+    color: #a88308d7;
+}
+
+.jobs-table tr:nth-child(even) {
+    background-color: #1a1a1a;
+}
+
+.jobs-table tr:hover {
+    background-color: linear-gradient(to bottom, #a88308d7, #000000);
+}
+
+@media (max-width: 768px) {
+
+    .jobs-table thead {
+        display: none;
+    }
+
+    .jobs-table,
+    .jobs-table tbody,
+    .jobs-table tr,
+    .jobs-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .jobs-table tr {
+        margin-bottom: 15px;
+        background: #131212;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+    .jobs-table td {
+        text-align: right;
+        color: white;
+        font-size: 15px;
+        padding-left: 50%;
+        position: relative;
+        border: none;
+        border-bottom: 1px solid #333;
+    }
+
+    .jobs-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        text-align: left;
+        font-weight: bold;
+        color: #0ff;
+    }
+    button {
+  width: 150px;
+  height: 60px; 
+  border: 2px solid grey;
+  border-radius: 45px;
+  transition: all 0.3s;
+  cursor: pointer;
+  background: white;
+  font-size: 1.4rem;
+  font-weight: 550;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 25px;
+  transition: background-color 0.5s ease, color 0.3s ease, font-size 0.3s ease;
+}
+}

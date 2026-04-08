@@ -5,6 +5,51 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+console.log("scrpt loaded");
+
+//=========================
+//jobs/apply info getting
+//=========================
+const API_BASE = "https://localhost:7176/api";
+
+
+async function loadJobs() {
+    try {
+        const res = await fetch(`${API_BASE}/Opportuniteis`);
+        const jobs = await res.json();
+
+        const tableBody = document.getElementById("jobsTableBody");
+        const noJobs = document.getElementById("noJobs");
+
+        if (!jobs || jobs.length === 0) {
+            noJobs.style.display = "block";
+            tableBody.innerHTML = "";
+            return;
+        }
+
+        noJobs.style.display = "none";
+
+        tableBody.innerHTML = jobs.map(job => `
+    <tr>
+        <td data-label="Title">${job.title}</td>
+        <td data-label="Description">${job.description}</td>
+        <td data-label="Requirements">${job.requirements}</td>
+        <td data-label="Type">${job.type}</td>
+        <td data-label="Stipend">${job.stipend}</td>
+        <td data-label="Action">
+            <button onclick="applyJob(${job.id})">Apply</button>
+        </td>
+    </tr>
+`).join("");
+
+    } catch (err) {
+        console.error("Error loading jobs:", err);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", loadJobs);
+
+
 window,addEventListener("load",()=>{
 //Desktop view
   let intro = document.querySelector(".intro-img");
@@ -239,3 +284,4 @@ lightbox.addEventListener('click', (e) => {
     lightbox.style.display = 'none';
   }
 });
+
